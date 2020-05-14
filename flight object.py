@@ -25,7 +25,7 @@ class compartment:
 
 
 class luggage:
-    def __int__(self, length, width, height, weight, checked, portable, direct):
+    def __init__(self, length, width, height, weight, checked, portable, direct):
         '''
         Specifies luggage restrictions;
         
@@ -47,10 +47,10 @@ class luggage:
         self.direct = direct
     def __repr__(self):
         return "Dimension for portable baggages: {0.length} * {0.width} \
-        * {0.height}\nMax weight for portable baggages: {0.weight}\n \
-        Number of checked baggage: {0.checked}\n \
-        Number of portable baggage: {0.portable}\n \
-        Direct baggage? : {0.direct}".format(self)
+* {0.height}\nMax weight for portable baggages: {0.weight}\n \
+Number of checked baggage: {0.checked}\n \
+Number of portable baggage: {0.portable}\n \
+Direct baggage? : {0.direct}".format(self)
 
 
 class flight:
@@ -76,12 +76,24 @@ class flight:
         '''
         
         return "{0.flight_No}\n\
-        {0.departure} ---> {0.landing}\n\
-        date of departure: {0.date}\n\
-        {0.compartment}\n\
-        {0.luggage}".format(self)
+{0.departure} ---> {0.landing}\n\
+date of departure: {0.date}\n\
+{0.compartment}\n\
+{0.luggage}".format(self)
 
 
 ##compartment tests**********************************
 economic = compartment("economic", 338, True)
-print(economic)
+#print(economic)
+
+
+##luggage tests**************************************
+normal_standard = luggage(120,75,150,23, 2, 2, True)
+#print(normal_standard)
+
+
+
+##flight tests***************************************
+AC021 = flight("AC021", "26/6/2020", "Toronto", "Guangzhou", economic,\
+               normal_standard)
+print(AC021)
