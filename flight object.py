@@ -29,7 +29,7 @@ class luggage:
         Specifies luggage restrictions;
         
         luggage(Float, Float, Float, Float, Float, Bool),
-        the first 3 field specifies length, width and height of the checked
+        the first 3 field specifies length, width and height of the portable
         luggage, in cm;
         the 4th field specifies the quantity of checked baggages;
         the 5th field specifies the quantity of portable ;beggages
