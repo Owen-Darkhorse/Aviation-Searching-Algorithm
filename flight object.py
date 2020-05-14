@@ -5,6 +5,19 @@
 ##Flight object for passenger
 ##********************************************************
 
+class luggage:
+    def __init__(self, length, width, height, weight, portable, checked, direct):
+        '''
+        
+        '''
+        self.length = length
+        self.width = width
+        self.height = height
+        self.weight = weight
+        self.portable = portable
+        self.checked = checked
+        self.direct = direct    
+
 class flight:
     def __init__(flight_No, date, departure, landing, compartment, luggage):
         '''
