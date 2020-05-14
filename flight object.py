@@ -8,7 +8,8 @@
 class luggage:
     def __init__(self, length, width, height, weight, portable, checked, direct):
         '''
-        
+        Fields: length(Float) width(Float) height(Float) weight(Float)
+                portable(Int) checked(Int) direct(Bool)
         '''
         self.length = length
         self.width = width
@@ -17,6 +18,10 @@ class luggage:
         self.portable = portable
         self.checked = checked
         self.direct = direct    
+
+
+
+
 
 class flight:
     def __init__(flight_No, date, departure, landing, compartment, luggage):
