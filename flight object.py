@@ -5,25 +5,7 @@
 ##Flight object for passenger
 ##********************************************************
 
-<<<<<<< HEAD
-class luggage:
-    def __init__(self, length, width, height, weight, portable, checked, direct):
-        '''
-        Fields: length(Float) width(Float) height(Float) weight(Float)
-                portable(Int) checked(Int) direct(Bool)
-        '''
-        self.length = length
-        self.width = width
-        self.height = height
-        self.weight = weight
-        self.portable = portable
-        self.checked = checked
-        self.direct = direct    
 
-
-
-
-=======
 class compartment:
     def __init__(self, name, price, catering):
         '''
@@ -47,7 +29,9 @@ class luggage:
         '''
         Specifies luggage restrictions;
         
-        luggage(Float, Float, Float, Float, Float, Bool),
+        Fields: length(Float) width(Float) height(Float) weight(Float)
+                portable(Int) checked(Int) direct(Bool),
+                
         the first 3 field specifies length, width and height of the portable
         luggage, in cm;
         the 4th field specifies the quantity of checked baggages;
@@ -61,8 +45,13 @@ class luggage:
         self.checked = checked
         self.portable = portable
         self.direct = direct
-    
->>>>>>> Owen
+    def __repr__(self):
+        return "Dimension for portable baggages: {0.length} * {0.width} \
+        * {0.height}\nMax weight for portable baggages: {0.weight}\n \
+        Number of checked baggage: {0.checked}\n \
+        Number of portable baggage: {0.portable}\n \
+        Direct baggage? : {0.direct}".format(self)
+
 
 class flight:
     def __init__(self, flight_No, date, departure, landing, compartment, luggage):
